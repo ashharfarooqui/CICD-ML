@@ -5,7 +5,7 @@ install:
 format:	
 	black *.py 
 
-train:
+training-set:
 	python training-set.py
 
 eval:
