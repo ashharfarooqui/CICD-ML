@@ -23,7 +23,7 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GB_TOKEN }}
         run: make eval
-      - name: Update Branch
+      - name: Ashhar Branch
         env:
           NAME: ${{ secrets.USER_NAME }}
           EMAIL: ${{ secrets.USER_EMAIL }}
