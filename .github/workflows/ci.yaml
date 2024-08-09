@@ -1,11 +1,11 @@
 name: Continuous Integration
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
-  
+
 permissions: write-all
 jobs:
   build:
@@ -18,7 +18,7 @@ jobs:
       - name: Format
         run: make format
       - name: Train
-        run: make train
+        run: make training-set
       - name: Evaluation
         env:
           REPO_TOKEN: ${{ secrets.GB_TOKEN }}
