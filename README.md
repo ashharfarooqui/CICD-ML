@@ -2,7 +2,7 @@
 [![Continuous Deployment](https://github.com/ashharfarooqui/CICD-ML/actions/workflows/cd.yml/badge.svg)](https://github.com/ashharfarooqui/CICD-ML/actions/workflows/cd.yml)
 
 # CICD-ML
-This repository is for Machine Learning and deploying using CI/CD.
+This repository is for Machine Learning while the deployment is done using CI/CD.
 
 ## Project Description
 In this project, we will train our random forest algorithm and create a drug classifier using scikit-learn pipelines. We will use CML to automate the evaluation process following training. Eventually, the online application will be developed and implemented at Hugging Face Hub. 
