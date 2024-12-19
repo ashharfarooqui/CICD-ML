@@ -11,7 +11,7 @@ from sklearn.preprocessing import OrdinalEncoder, StandardScaler
 from sklearn.metrics import accuracy_score, f1_score
 
 
-# Loading the data from csv file 
+# Loading the data from csv file
 df = pd.read_csv("Data/drug200.csv")
 df = df.sample(frac=1)
 df.head(5)
@@ -25,8 +25,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # Creating a pipeline code here
-cat_col = [1,2,3]
-num_col = [0,4]
+cat_col = [1, 2, 3]
+num_col = [0, 4]
 
 transform = ColumnTransformer(
     [
@@ -55,7 +55,7 @@ print("Accuracy:", str(round(accuracy, 2) * 100) + "%", "F1:", round(f1, 2))
 with open("Results/metrics.txt", "w") as outfile:
     outfile.write(f"\nAccuracy = {round(accuracy, 2)}, F1 Score = {round(f1, 2)}.")
 
-# Here is confusion matrix plot 
+# Here is confusion matrix plot
 cm = confusion_matrix(y_test, predictions, labels=pipe.classes_)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=pipe.classes_)
 disp.plot(cmap=plt.cm.Greens)
